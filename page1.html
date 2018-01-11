@@ -1,0 +1,98 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Online Medical shop</title>
+
+
+<script >
+function validform()
+{  
+	var name=document.myform.name.value;  
+	var name1=document.myform.name1.value; 
+	var name2=document.myform.name2.value;
+	var name3=document.myform.name3.value;
+	//var name4=document.myform.name4.value;
+	//var name5=document.myform.name5.value;
+	var name6=document.myform.name6.value;
+	var name7=document.myform.name7.value;
+	//var name8=document.myform.name8.value;
+	  
+	if (name==null || name==" ")
+		{  
+		  alert("Delivery type can't be blank");  
+		  return false;  
+		}
+	else if(name1.length<4)
+		{  
+		  alert("Doctor Name must be at least 6 characters long.");  
+		  return false;  
+		}  
+	else if(name2.length<4)
+		{
+			alert("Patient Name must be at least 6 characters long.");  
+			  return false;  	
+		}
+	else if(name3<=18)
+		{
+		alert("Patient Age must be greater than 18.");  
+		  return false; 
+		}
+	else if(name6>10)
+		{
+		alert("Contact number should not greater than 10 number.");  
+		  return false; 
+		}
+	else if(name7!=mumbai || name7!=pune || name7!=ratnagiri || name7!=guhagar)
+		{
+		alert("City should not different from this.");  
+		  return false; 
+		}
+	}
+</script>
+
+
+
+</head>
+<body bgcolor="#ffccff">
+
+<img alt="" src="/home/crb/Desktop/patanjali.jpg">
+
+<font color="black" size=6 face="URW Chancery L">
+<center><h1>  Patanjali Medical Shop </h1></center>
+</font>
+
+
+<form name="myform" method="post" action="connect1.jsp">
+
+<font>
+<center>
+ <font color="red" size=5 face="Purisa">
+<table>
+<ul Type="disc">
+<tr><td> <li></td> <b> <i> <u> <td>Delivery Type</td><td> :</td> </i> </b> </u> <td><input type="text" name="name"><br></li></td></tr>
+<tr><td> <li></td>  <b> <i> <u> <td>Doctor Name  </td><td> :</td> </i> </b> </u> <td><input type="text" name="name1"><br></li></td></tr>
+<tr><td> <li></td>  <b> <i> <u> <td>Patient Name </td><td> :</td> </i> </b> </u> <td><input type="text" name="name2"><br></li></td></tr>
+<tr><td> <li></td>  <b> <i> <u> <td>Patient Age  </td><td> :</td> </i> </b> </u> <td><input type="text" name="name3"><br></li></td></tr>
+<tr><td> <li></td>  <b> <i> <u> <td>Address      </td><td> :</td> </i> </b> </u> <td><input type="text" name="name4"><br></li></td></tr>
+<tr><td> <li></td>  <b> <i> <u> <td>Email        </td><td> :</td> </i> </b> </u> <td><input type="text" name="name5"><br></li></td></tr>
+<tr><td> <li></td>  <b> <i> <u> <td>Contact Number</td><td>:</td> </i> </b> </u> <td><input type="text" name="name6"><br></li></td></tr>
+<tr><td> <li></td>  <b> <i> <u> <td>City         </td><td> :</td> </i> </b> </u> <td><input type="text" name="name7"><br></li></td></tr>
+<tr><td> <li></td>  <b> <i> <u> <td>Pincode      </td><td> :</td> </i> </b> </u> <td><input type="text" name="name8"><br></li></td></tr>
+</ul>
+</font>
+</table>
+</font>
+<a href="connect1.jsp"> <input type="button" value="submit" style="font-size:20px"></a>
+
+
+
+
+</center>
+</font>
+</form>
+</body>
+</html>
